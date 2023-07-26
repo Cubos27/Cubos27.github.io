@@ -1,0 +1,298 @@
+:root {
+    --border-radius: 6px;
+    --skills-bar-length: 0%;
+}
+
+* {
+    color: white;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #001122;
+}
+
+#background1 {
+    padding-bottom: 1vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('images/background.svg');
+}
+
+.box1 {
+    text-align: center;
+    margin: 29vh 10vw;
+    border-radius: 10px;
+    padding: 6.5px;
+    /*THIS IS HOW TO MAKE A MARGIN WITH GRADIENT*/
+    /* background-image: linear-gradient(
+        239deg,
+        #36fe9b, 
+        #00dfa5, 
+        #00a0a4,
+        #006280,
+        #002a43); */
+    background-color: #36fe9b;
+    animation-name: color;
+    animation-duration: 1.5s;
+    margin-bottom: 40vh;
+}
+
+#second-div {
+    background-color: white;
+    padding: 2rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.titles, .subtitles {
+    background-color: white;
+    color: black;
+}
+
+#skills-div {
+    background-color: #001122;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+}
+
+.card {
+    background-color: #002a43;
+    padding: 4vh 3rem;
+    border-radius: var(--border-radius);
+    float: left;
+}
+
+.card-title {
+    margin-bottom: 2vh;
+}
+
+.skills {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-item {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-tech {
+    margin-right: 1vw;
+    margin-top: 1vh;
+}
+
+.skills-bar,
+.skills-bar::after {
+    position: relative;
+    background-color: #888;
+    border-radius: var(--border-radius);
+    width: 175px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.skills-bar::after {
+    content: '';
+    position: absolute;
+    left: -175px;
+    background-color: #36fe9b;
+    transition: all 2s ease;
+    animation: skills-bar-fill 2s ease-in-out forwards;
+}
+
+.skills-bar--90::after {
+    --skills-bar-length: 90%
+}
+
+.skills-bar--70::after {
+    --skills-bar-length: 70%
+}
+
+.skills-bar--60::after {
+    --skills-bar-length: 60%
+}
+
+.skills-bar--50::after {
+    --skills-bar-length: 50%
+}
+
+.skills-bar--40::after {
+    --skills-bar-length: 40%
+}
+
+.skills-bar--20::after {
+    --skills-bar-length: 20%
+}
+
+@keyframes skills-bar-fill { 
+    to {
+        transform: translateX(var(--skills-bar-length));
+    }
+}
+
+#mathle {
+    display: none;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001122;
+    margin-bottom: 3vh;
+}
+
+#mathle-photos {
+    display: none;
+    background-color: #001122;
+    margin-bottom: 8vh;
+}
+
+.subt {
+    padding-top: 5vh;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.image {
+    display: block;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 800px;
+}
+
+#wid {
+    margin: 0 3vw;
+    display: block;
+    text-align: center;
+}
+
+#myRoute {
+    display: none;
+}
+
+#myRoute-photos {
+    display: none;
+    background-color: #001122;
+}
+
+#image-myroute {
+    margin-bottom: 5vh;
+}
+
+.block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+.block img {
+    width: 30%;
+    max-width: 350px;
+    border-radius: 25px;
+}
+
+.block p {
+    margin: 0 3vw;
+}
+
+h3 {
+    font-size: 2rem;
+    background: none;
+}
+
+p {
+    font-size: 1.5rem;
+    background: none;
+}
+
+@keyframes color {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+#contact {
+    margin: 2vw;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: none;
+}
+
+#contact:hover {
+    color: #36fe9b;
+    transition: all 0.3s ease;
+}
+
+.button {
+    background-color: #36fe9b;
+    border: 3px solid #36fe9b;
+    border-radius: 10px;
+    color: black;
+    margin: 2vw;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: all 0.3s ease;
+    background-color: #001122;
+    color: white;
+}
+
+#btnLanguage {
+    position: fixed;
+    right: 10px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: black 0 0 4px;
+}
+
+footer p {
+    display: inline;
+    margin-right: 1vw;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#group-buttons {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+}
+
+.bi {
+    margin: 1vh 1vw;
+    font-size: 2rem;
+}
+
+.bi:hover {
+    color: #36fe9b;
+    transition: all .4s ease;
+}
+
+#number {
+    margin-left: 1.5vw;
+}
+
+@media screen and (max-width: 1000px) {
+    #skills-div {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card {
+        margin-top: 3vh;
+    }
+}

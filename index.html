@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script defer src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Portfolio</title>
+</head>
+<body class="scrollable">
+    <div id="background1">
+        <button id="btnTitle" class="button">Home</button>
+        <button id="btnMathle" class="button">Mathle</button>
+        <button id="btnMyRoute" class="button">My Route</button>
+        <a href="#group-buttons" id="contact">contact me</a>
+
+        <button id="btnLanguage" class="button">Español</button>
+
+        <div id="welcome" class="box1">
+            <div id="second-div">
+                <h1 id="title" class="titles">Welcome</h1>
+                <h2 id="subtitle" class="subtitles">Hey, I'm Adriel Andrade, web designer and I'm ready to make your new amazing wesite</h2>
+            </div>
+        </div>
+
+        <div id="mathle" class="box1">
+            <div id="second-div">
+                <h3 id="mathle-title" class="titles">Mathle</h3>
+                <p id="mathle-text" class="subtitles">A project made to help you to learn maths, it has a system of
+                    register and log in and some activities like a rush or read activities
+                    sadly, it's not finished yet
+                </p>
+            </div>
+        </div>
+
+        <div id="myRoute" class="box1">
+            <div id="second-div">
+                <h3 id="myRoute-title" class="titles">My Route</h3>
+                <p id="myRoute-text" class="subtitles">An aplication made to help you finding any bus or train routes so you
+                    can get to your destination
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills-div">
+        <div class="card" data-aos="zoom-in">
+            <h3 class="card-title">Programming skills</h2>
+            <div class="skills">
+                <div class="skills-item">
+                    <p class="skills-tech">HTML</p>
+                    <div class="skills-bar skills-bar--70"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">CSS</p>
+                    <div class="skills-bar skills-bar--60"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">JavaScript</p>
+                    <div class="skills-bar skills-bar--40"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">Python</p>
+                    <div class="skills-bar skills-bar--90"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">Django</p>
+                    <div class="skills-bar skills-bar--60"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">Node JS</p>
+                    <div class="skills-bar skills-bar--20"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">Android Studio</p>
+                    <div class="skills-bar skills-bar--50"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card" data-aos="zoom-in">
+            <h3 class="card-title">Design and audio</h2>
+            <div class="skills">
+                <div class="skills-item">
+                    <p class="skills-tech">Photoshop</p>
+                    <div class="skills-bar skills-bar--60"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">figma</p>
+                    <div class="skills-bar skills-bar--40"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">JustInMind</p>
+                    <div class="skills-bar skills-bar--40"></div>
+                </div>
+                <div class="skills-item">
+                    <p class="skills-tech">Reaper</p>
+                    <div class="skills-bar skills-bar--70"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mathle-photos">
+        <h3 id="subtitle2" class="subt">Mathle images</h3>
+        <div id="image-container">
+            <img src="images/mathle_rush.jpeg" alt="" class="image">
+        </div>
+        <p id="wid">I made big part of all mathle front-end and I worked with its SQLite data base in Django</p>
+    </div>
+
+    <div id="myRoute-photos">
+        <h3 id="subtitle3" class="subt">MyRoute images</h3>
+        <div id="image-myroute">
+            <div id="first-block" class="block">
+                <img src="images/camiones.jpg" data-aos="fade-right">
+                <p>I made all My Route front-end and some parts of its back-end</p>
+            </div>
+            <div id="second-block" class="block">
+                <p>I worked with Android Studio and with an SQLite data base</p>
+                <img src="images/mapa.jpg" data-aos="fade-left">
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    AOS.init({
+        once: true
+    });
+</script>
+<footer>
+    <div id="group-buttons">
+        <a href="mailto:adriel.andrade276@gmail.com"><i class="bi bi-envelope"></i></a>
+        <a href="https://github.com/Cubos27" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://wa.link/aowhos" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        <p id="number">33 2708 3945</p>
+    </div>
+    <p>copyright 2023</p>
+</footer>
+</html>
