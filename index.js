@@ -7,6 +7,11 @@ function changeLanguage(){
     let myRouteImage = document.getElementById('subtitle3')
     let contact = document.getElementById('contact')
     let wid = document.getElementById('wid')
+    let myrouteWid1 = document.getElementById('myroute-wid1')
+    let myrouteWid2 = document.getElementById('myroute-wid2')
+    let skills = document.getElementById('h3-skills')
+    let prog = document.getElementById('prog')
+    let desi = document.getElementById('desi')
     if(spanishSelected){
         //it changes to english
         spanishSelected = false
@@ -24,6 +29,13 @@ function changeLanguage(){
         myRouteImage.innerHTML = 'MyRoute images'
 
         wid.innerHTML = 'I made big part of all mathle front-end and I worked with its SQLite data base in Django'
+        myrouteWid1.innerHTML = 'I made all My Route front-end and some parts of its back-end'
+        myrouteWid2.innerHTML = 'I worked with Android Studio and with an SQLite data base'
+
+        skills.innerHTML = 'Skills'
+
+        prog.innerHTML = 'Programming'
+        desi.innerHTML = 'Design and audio'
     }else{
         //it changes to spanish
         spanishSelected = true
@@ -41,17 +53,24 @@ function changeLanguage(){
         myRouteImage.innerHTML = 'Imagenes de MyRoute'
 
         wid.innerHTML = 'Hice gran parte del front-end de mathle y trabaje con su base de datos SQLite en Django'
+        myrouteWid1.innerHTML = 'Realice todo el front-end y algunas partes de su back-end'
+        myrouteWid2.innerHTML = 'Trabaje con Android Studio y con una base de datos SQLite'
+
+        skills.innerHTML = 'Habilidades'
+
+        prog.innerHTML = 'Programacion'
+        desi.innerHTML = 'diseño y audio'
     }
 }
 
-function showWelcome() {
+function ShowWelcome() {
     document.getElementById('welcome').style.display = 'block';
     document.getElementById('skills-div').style.display = 'flex';
     btnHome.innerHTML = ''
     btnHome.style.height = '2.2vh'
     btnHome.style.width = '1vw'
 }
-function hideWelcome() {
+function HideWelcome() {
     document.getElementById('welcome').style.display = 'none'
     document.getElementById('skills-div').style.display = 'none';
     btnHome.innerHTML = 'Home'
@@ -59,14 +78,14 @@ function hideWelcome() {
     btnHome.style.width = 'auto'
 }
 
-function showMathle() {
+function ShowMathle() {
     document.getElementById('mathle').style.display = 'block';
     document.getElementById('mathle-photos').style.display = 'block';
     btnMathle.innerHTML = ''
     btnMathle.style.height = '2.2vh'
     btnMathle.style.width = '1vw'
 }
-function hideMathle() {
+function HideMathle() {
     document.getElementById('mathle').style.display = 'none'
     document.getElementById('mathle-photos').style.display = 'none';
     btnMathle.innerHTML = 'Mathle'
@@ -74,14 +93,14 @@ function hideMathle() {
     btnMathle.style.width = 'auto'
 }
 
-function showMyRoute() {
+function ShowMyRoute() {
     document.getElementById('myRoute').style.display = 'block';
     document.getElementById('myRoute-photos').style.display = 'block'
     btnMyRoute.innerHTML = ''
     btnMyRoute.style.height = '2.2vh'
     btnMyRoute.style.width = '1vw'
 }
-function hideMyRoute() {
+function HideMyRoute() {
     document.getElementById('myRoute').style.display = 'none'
     document.getElementById('myRoute-photos').style.display = 'none'
     btnMyRoute.innerHTML = 'My Route'
@@ -89,25 +108,54 @@ function hideMyRoute() {
     btnMyRoute.style.width = 'auto'
 }
 
+function Contact(){
+    let mail = document.getElementById('mail')
+    let git = document.getElementById('git')
+    let whats = document.getElementById('whats')
+    let number = document.getElementById('number')
+
+    mail.classList.add('bi-animation')
+    git.classList.add('bi-animation')
+    whats.classList.add('bi-animation')
+    number.classList.add('bi-animation')
+}
+
+function ContactRemove(){
+    let mail = document.getElementById('mail')
+    let git = document.getElementById('git')
+    let whats = document.getElementById('whats')
+    let number = document.getElementById('number')
+
+    mail.classList.remove('bi-animation')
+    git.classList.remove('bi-animation')
+    whats.classList.remove('bi-animation')
+    number.classList.remove('bi-animation')
+}
+
+setInterval(ContactRemove, 2500)
+
 const btnHome = document.getElementById('btnTitle');
 const btnMathle = document.getElementById('btnMathle')
 const btnMyRoute = document.getElementById('btnMyRoute')
+const contactbtn = document.getElementById('contact')
 const btnLanguage = document.getElementById('btnLanguage')
 
-btnHome.addEventListener('click', showWelcome)
-btnHome.addEventListener('click', hideMathle)
-btnHome.addEventListener('click', hideMyRoute)
+btnHome.addEventListener('click', ShowWelcome)
+btnHome.addEventListener('click', HideMathle)
+btnHome.addEventListener('click', HideMyRoute)
 
-btnMathle.addEventListener('click', showMathle)
-btnMathle.addEventListener('click', hideMyRoute)
-btnMathle.addEventListener('click', hideWelcome)
+btnMathle.addEventListener('click', ShowMathle)
+btnMathle.addEventListener('click', HideMyRoute)
+btnMathle.addEventListener('click', HideWelcome)
 
-btnMyRoute.addEventListener('click', showMyRoute)
-btnMyRoute.addEventListener('click', hideMathle)
-btnMyRoute.addEventListener('click', hideWelcome)
+btnMyRoute.addEventListener('click', ShowMyRoute)
+btnMyRoute.addEventListener('click', HideMathle)
+btnMyRoute.addEventListener('click', HideWelcome)
+
+contactbtn.addEventListener('click', Contact)
 
 btnLanguage.addEventListener('click', changeLanguage)
 
 let spanishSelected = false
 
-showWelcome()
+ShowWelcome()

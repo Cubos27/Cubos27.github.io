@@ -62,6 +62,7 @@
     padding: 4vh 3rem;
     border-radius: var(--border-radius);
     float: left;
+    margin: 0 2vw;
 }
 
 .card-title {
@@ -191,6 +192,7 @@
     justify-content: space-around;
     align-items: center;
     padding: 2vh 0;
+    margin: 0 3vw;
 }
 
 .block img {
@@ -200,7 +202,8 @@
 }
 
 .block p {
-    margin: 0 3vw;
+    margin: 0 2vw;
+    text-align: center;
 }
 
 h3 {
@@ -250,6 +253,8 @@ p {
 #btnLanguage {
     position: fixed;
     right: 10px;
+    top: 2vh;
+    z-index: +1;
 }
 
 footer{
@@ -261,7 +266,7 @@ footer{
 
 footer p {
     display: inline;
-    margin-right: 1vw;
+    margin-right: 2vw;
     text-align: left;
     font-size: 1rem;
 }
@@ -286,6 +291,22 @@ footer p {
     margin-left: 1.5vw;
 }
 
+.bi-animation {
+    animation: flashing 1.5s;
+}
+
+@keyframes flashing {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #36fe9b;
+    }
+    100% {
+        color: white;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     #skills-div {
         flex-direction: column;
@@ -294,5 +315,9 @@ footer p {
 
     .card {
         margin-top: 3vh;
+    }
+
+    #contact {
+        display: block;
     }
 }
