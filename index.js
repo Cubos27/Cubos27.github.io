@@ -22,8 +22,8 @@ function changeLanguage(){
         title.innerHTML = 'Welcome'
         subtitle.innerHTML = "Hey, I'm Adriel Andrade, web designer and I'm ready to make your new amazing wesite"
 
-        mathleText.innerHTML = "A project made to help you to learn maths, it has a system of register and log in and some activities like a rush or read activities sadly, it's not finished yet"
-        myRouteText.innerHTML = "An aplication made to help you finding any bus or train routes so you can get to your destination"
+        mathleText.innerHTML = "A project I worked on made to help you to learn maths, it has a system of register and log in and some activities like a rush or read activities sadly, it's not finished yet"
+        myRouteText.innerHTML = "An app I worked on made to help you finding any bus or train routes so you can get to your destination"
 
         mathleImage.innerHTML = 'Mathle images'
         myRouteImage.innerHTML = 'MyRoute images'
@@ -46,8 +46,8 @@ function changeLanguage(){
         title.innerHTML = 'Bienvenido'
         subtitle.innerHTML = 'Hola, soy Adriel Andrade, diseñador de paginas web y programador, y estoy preparado para hacer tu nuevo sitio web'
 
-        mathleText.innerHTML = 'Mathle es una pagina para ayudar al aprendizaje de matematicas, tiene sistema de inicio de sesion y registro, tristemente no esta terminada aun'
-        myRouteText.innerHTML = 'Una aplicacion hecha para ayudarte a encontrar cualquier ruta de tren o camion para que puedas llegar a tu destino'
+        mathleText.innerHTML = 'Mathle es una pagina web en la que trabaje, fue hecha para ayudar al aprendizaje de matematicas, tiene sistema de inicio de sesion y registro, tristemente no esta terminada aun'
+        myRouteText.innerHTML = 'Una aplicacion en la que trabaje hecha para ayudarte a encontrar cualquier ruta de tren o camion para que puedas llegar a tu destino'
 
         mathleImage.innerHTML = 'Imagenes de Mathle'
         myRouteImage.innerHTML = 'Imagenes de MyRoute'
@@ -66,6 +66,7 @@ function changeLanguage(){
 function ShowWelcome() {
     document.getElementById('welcome').style.display = 'block';
     document.getElementById('skills-div').style.display = 'flex';
+    document.getElementById('h3-skills').style.display = 'block';
     btnHome.innerHTML = ''
     btnHome.style.height = '2.2vh'
     btnHome.style.width = '1vw'
@@ -73,6 +74,7 @@ function ShowWelcome() {
 function HideWelcome() {
     document.getElementById('welcome').style.display = 'none'
     document.getElementById('skills-div').style.display = 'none';
+    document.getElementById('h3-skills').style.display = 'none';
     btnHome.innerHTML = 'Home'
     btnHome.style.height = 'auto'
     btnHome.style.width = 'auto'
