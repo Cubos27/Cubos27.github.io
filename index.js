@@ -1,4 +1,4 @@
-function changeLanguage(){
+function ChangeLanguage(){
     let title = document.querySelector('h1')
     let subtitle = document.querySelector('h2')
     let myRouteText = document.getElementById('myRoute-text')
@@ -120,6 +120,8 @@ function Contact(){
     git.classList.add('bi-animation')
     whats.classList.add('bi-animation')
     number.classList.add('bi-animation')
+    
+    setTimeout(ContactRemove, 2500)
 }
 
 function ContactRemove(){
@@ -133,8 +135,6 @@ function ContactRemove(){
     whats.classList.remove('bi-animation')
     number.classList.remove('bi-animation')
 }
-
-setInterval(ContactRemove, 2500)
 
 const btnHome = document.getElementById('btnTitle');
 const btnMathle = document.getElementById('btnMathle')
@@ -156,8 +156,9 @@ btnMyRoute.addEventListener('click', HideWelcome)
 
 contactbtn.addEventListener('click', Contact)
 
-btnLanguage.addEventListener('click', changeLanguage)
+btnLanguage.addEventListener('click', ChangeLanguage)
 
 let spanishSelected = false
 
 ShowWelcome()
+ChangeLanguage()
